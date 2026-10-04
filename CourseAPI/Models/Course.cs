@@ -1,0 +1,17 @@
+﻿namespace CourseAPI.Models
+{
+    public class Course
+    {
+        public int Id { get; set; }
+
+        public string Title { get; set; } = "";
+        public string Description { get; set; } = "";
+        public string ImageUrl { get; set; } = "";
+        public decimal Price { get; set; }
+        public string UserId { get; set; } = "";
+        public User User { get; set; } = null!;
+
+        public List<CourseSection> Sections { get; set; } = [];
+    }
+
+}

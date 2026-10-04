@@ -1,0 +1,50 @@
+@CourseAPI_HostAddress = https://localhost:7293
+
+GET {{CourseAPI_HostAddress}}/api/courses
+Accept: application/json
+
+###
+
+POST {{CourseAPI_HostAddress}}/api/courses
+Content-Type: application/json
+
+{
+    "name": "C#"
+}
+
+###
+
+DELETE {{CourseAPI_HostAddress}}/api/courses/11
+
+###
+
+PATCH {{CourseAPI_HostAddress}}/api/courses/12
+Content-Type: application/json
+
+{
+    "name": "C# Avanzado"
+}
+
+###
+
+GET {{CourseAPI_HostAddress}}/api/courses/private
+
+###
+
+POST {{CourseAPI_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "bolgarfelipe@gmail.com",
+    "password": "Genaropunta@1"
+}
+
+###
+
+POST {{CourseAPI_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "bolgarfelipe@gmail.com",
+    "password": "Genaropunta@1"
+}
